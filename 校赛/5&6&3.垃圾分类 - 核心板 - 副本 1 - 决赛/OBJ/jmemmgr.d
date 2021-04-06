@@ -1,0 +1,12 @@
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jmemmgr.c
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jinclude.h
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jconfig.h
+..\obj\jmemmgr.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\jmemmgr.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\jmemmgr.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\jmemmgr.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jpeglib.h
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jmorecfg.h
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jpegint.h
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jerror.h
+..\obj\jmemmgr.o: ..\MJPEG\JPEG\jmemsys.h

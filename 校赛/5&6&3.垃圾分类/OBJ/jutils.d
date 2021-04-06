@@ -1,0 +1,11 @@
+..\obj\jutils.o: ..\MJPEG\JPEG\jutils.c
+..\obj\jutils.o: ..\MJPEG\JPEG\jinclude.h
+..\obj\jutils.o: ..\MJPEG\JPEG\jconfig.h
+..\obj\jutils.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\jutils.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\jutils.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\jutils.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\jutils.o: ..\MJPEG\JPEG\jpeglib.h
+..\obj\jutils.o: ..\MJPEG\JPEG\jmorecfg.h
+..\obj\jutils.o: ..\MJPEG\JPEG\jpegint.h
+..\obj\jutils.o: ..\MJPEG\JPEG\jerror.h

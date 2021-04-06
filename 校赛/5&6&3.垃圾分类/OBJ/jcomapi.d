@@ -1,0 +1,11 @@
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jcomapi.c
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jinclude.h
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jconfig.h
+..\obj\jcomapi.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\jcomapi.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\jcomapi.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\jcomapi.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jpeglib.h
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jmorecfg.h
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jpegint.h
+..\obj\jcomapi.o: ..\MJPEG\JPEG\jerror.h

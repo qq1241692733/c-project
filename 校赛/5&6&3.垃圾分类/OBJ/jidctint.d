@@ -1,0 +1,12 @@
+..\obj\jidctint.o: ..\MJPEG\JPEG\jidctint.c
+..\obj\jidctint.o: ..\MJPEG\JPEG\jinclude.h
+..\obj\jidctint.o: ..\MJPEG\JPEG\jconfig.h
+..\obj\jidctint.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\jidctint.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\jidctint.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\jidctint.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\jidctint.o: ..\MJPEG\JPEG\jpeglib.h
+..\obj\jidctint.o: ..\MJPEG\JPEG\jmorecfg.h
+..\obj\jidctint.o: ..\MJPEG\JPEG\jpegint.h
+..\obj\jidctint.o: ..\MJPEG\JPEG\jerror.h
+..\obj\jidctint.o: ..\MJPEG\JPEG\jdct.h
