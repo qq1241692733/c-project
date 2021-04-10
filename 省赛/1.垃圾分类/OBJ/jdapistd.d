@@ -1,0 +1,11 @@
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jdapistd.c
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jinclude.h
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jconfig.h
+..\obj\jdapistd.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\jdapistd.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\jdapistd.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\jdapistd.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jpeglib.h
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jmorecfg.h
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jpegint.h
+..\obj\jdapistd.o: ..\MJPEG\JPEG\jerror.h
