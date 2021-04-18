@@ -1,3 +1,4 @@
+#include "videoplayer.h" 
 #include "sys.h"
 #include "delay.h"  
 #include "usart.h"   
@@ -17,15 +18,22 @@
 #include "fontupd.h"
 #include "text.h"	 
 #include "wm8978.h"	 
-#include "videoplayer.h" 
 #include "timer.h" 
 
 #include "display.h"
-  u8 count=0;
+ 
+u8 count=0;
+u8 a1=0;
+u8 a2=0;
+u8 a3=0;
+u8 a4=0;	
+u8 arr1[8] = {0};
+u8 arr2[8] = {0};
+u8 arr3[8] = {0};
+u8 arr4[8] = {0};
 int main(void)
 { 
-  u8 key;
-
+ // u8 key;
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
 	delay_init(168);  //初始化延时函数
 	KEY_Init();   
@@ -56,7 +64,9 @@ int main(void)
 	while(1)
 	{
 			video_Display();
-			Display();	
+			delay_ms(500);
+  		Display();	
+
 //		key=KEY_Scan(0);		//得到键值
 //	   	if(key)
 //		{						   

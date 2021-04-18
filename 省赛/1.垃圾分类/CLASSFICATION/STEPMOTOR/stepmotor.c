@@ -9,22 +9,16 @@ void gpio_init()
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 	
-	
 	GPIO_Initstructure.GPIO_Pin=GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_0|GPIO_Pin_4;   //通信
 	GPIO_Initstructure.GPIO_Mode=GPIO_Mode_IN;
 	GPIO_Initstructure.GPIO_PuPd=GPIO_PuPd_DOWN;
 	GPIO_Init(GPIOF, &GPIO_Initstructure);
-	
 	
 	GPIO_Initstructure.GPIO_Pin=GPIO_Pin_11|GPIO_Pin_12|GPIO_Pin_13;  // PF10 CW转向12 黑   PF2 CLK脉冲 11 白    PF4 EN使能 13
 	GPIO_Initstructure.GPIO_Mode=GPIO_Mode_OUT;
 	GPIO_Initstructure.GPIO_OType=GPIO_OType_PP;
 	GPIO_Initstructure.GPIO_Speed=GPIO_High_Speed;
 	GPIO_Init(GPIOD, &GPIO_Initstructure);
-	
-
-	
-
 }
 
 void Turn_around1(int angle,int period)  //  正转
@@ -39,7 +33,7 @@ void Turn_around1(int angle,int period)  //  正转
 				GPIO_ResetBits(GPIOD,GPIO_Pin_11); //   CLK拉低
 				delay_us(period);    
 		}
-		//GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
+		GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
 }
 
 void Turn_around2(int angle,int period)  //  反转
@@ -85,18 +79,8 @@ int garbage_ret()
 
 int end_ret()
 {
-//	if() 
-//	{
-//		delay_ms();
-//		if()
-//		{
-//			return 0;
-//		}
-//	}	
 	if(GPIO_ReadInputDataBit(GPIOF, GPIO_Pin_1)==1){
 						return 1;
 		}
-	
-
 }
 
