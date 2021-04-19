@@ -57,29 +57,20 @@ int main(void)
 		LCD_Fill(30,50,240,66,WHITE);//清除显示	     
 		delay_ms(200);	
 		LED0=!LED0;
-	}  	 
+	}
 	POINT_COLOR=RED;    
-  
+
 	BEEP_Init();
 	while(1)
 	{
+			GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
 			video_Display();
 			delay_ms(500);
   		Display();	
 
-//		key=KEY_Scan(0);		//得到键值
-//	   	if(key)
-//		{						   
-//			switch(key)
-//			{				 
-//				case WKUP_PRES:	//控制蜂鸣器
-//					Display();
-//					break;
-//				case KEY0_PRES:	//控制LED0翻转
-
-//					break;
-//			}
-//		}else delay_ms(10); 
+//	GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
+//		delay_ms(2000);
+//		while(1){}
 	}
 }
 

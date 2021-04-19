@@ -156,12 +156,15 @@ UPD:
 		a=garbage_ret();
 		if(a!=0)					
 			break;
+	//	GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
+		
+		GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // Í£
 	}
 	
 	GPIO_SetBits(GPIOF,GPIO_Pin_4);    // Í£	
 	switch(a)   
 	{
-		GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
+		GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í
 		case 1:   //1ºÅÍ°    ¿É»ØÊÕÀ¬»ø  PF1
 				a1++;		
 				LCD_ShowxNum(170,160,a1,8,24,0);    //ÏÔÊ¾À¬Ä³ÀàÀ¬»ø×ÜÊý				 
@@ -179,7 +182,6 @@ UPD:
 		
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø
-				GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
 				delay_ms(1200);		
 				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1110);  //¹Ø
@@ -209,10 +211,8 @@ UPD:
 				}	
 					
 				Turn_around1(800,600);
-				GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø
-				GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
 				delay_ms(2500);		
 				Turn_around2(800,600);
 				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
@@ -245,7 +245,6 @@ UPD:
 				Turn_around1(1600,600);
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø
-						GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
 				delay_ms(2000);		
 				Turn_around2(1600,600);				
 				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	

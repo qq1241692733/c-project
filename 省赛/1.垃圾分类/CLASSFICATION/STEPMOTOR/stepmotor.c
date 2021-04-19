@@ -21,6 +21,7 @@ void gpio_init()
 	GPIO_Init(GPIOD, &GPIO_Initstructure);
 }
 
+
 void Turn_around1(int angle,int period)  //  正转
 {
 		int x;
@@ -33,7 +34,8 @@ void Turn_around1(int angle,int period)  //  正转
 				GPIO_ResetBits(GPIOD,GPIO_Pin_11); //   CLK拉低
 				delay_us(period);    
 		}
-		GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
+		//GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
+		GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // EN 使能 
 }
 
 void Turn_around2(int angle,int period)  //  反转
@@ -48,7 +50,8 @@ void Turn_around2(int angle,int period)  //  反转
 				GPIO_ResetBits(GPIOD,GPIO_Pin_11); //   CLK拉低
 				delay_us(period);    
 		}
-		GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
+		//GPIO_SetBits(GPIOD,GPIO_Pin_13);    // 停
+		GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // EN 使能 
 }
 
 
