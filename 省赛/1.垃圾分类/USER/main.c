@@ -63,7 +63,8 @@ int main(void)
 	BEEP_Init();
 	while(1)
 	{
-			GPIO_SetBits(GPIOD,GPIO_Pin_13);    // ͣ
+		
+
 			video_Display();
 			delay_ms(500);
   		Display();	

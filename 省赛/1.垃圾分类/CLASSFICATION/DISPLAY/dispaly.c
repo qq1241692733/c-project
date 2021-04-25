@@ -156,15 +156,16 @@ UPD:
 		a=garbage_ret();
 		if(a!=0)					
 			break;
-	//	GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
-		
-		GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // Í£
 	}
 	
-	GPIO_SetBits(GPIOF,GPIO_Pin_4);    // Í£	
+	GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // EN Ê¹ÄÜ 
+	delay_ms(20);
 	switch(a)   
 	{
-		GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í
+		GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // EN Ê¹ÄÜ 
+				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
+				TIM_SetCompare1(TIM13,20000-1090);  //¹Ø
+		
 		case 1:   //1ºÅÍ°    ¿É»ØÊÕÀ¬»ø  PF1
 				a1++;		
 				LCD_ShowxNum(170,160,a1,8,24,0);    //ÏÔÊ¾À¬Ä³ÀàÀ¬»ø×ÜÊý				 
@@ -174,7 +175,7 @@ UPD:
 				if(a1 <= 4)
 				{
 						LCD_ShowxNum((a-1)*144+120+(a1-1)*35,220,count,8,24,1);    //ÏÔÊ¾	
-				}else
+				}else if(a1 <= 8)
 				{
 						LCD_ShowxNum((a-1)*144+120+(a1-5)*35,244,count,8,24,1);    //ÏÔÊ¾	
 				}							
@@ -183,15 +184,17 @@ UPD:
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø
 				delay_ms(1200);		
-				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
-				TIM_SetCompare1(TIM13,20000-1110);  //¹Ø
-				delay_ms(1200);
-				
+
 				Show_Str(336,408,200,24,"  ¿É»ØÊÕÀ¬»ø  OK",24,0);
 				POINT_COLOR=RED;  
 				LCD_ShowxNum(260,408,count,8,24,1);    //ÏÔÊ¾ÐòºÅ
 				LCD_ShowxNum(406,408,a1,8,24,1);    //ÏÔÊ¾						
-				POINT_COLOR=BLUE;			
+				POINT_COLOR=BLUE;		
+				
+				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
+				TIM_SetCompare1(TIM13,20000-1090);  //¹Ø
+		
+	
 				
 				a=0;	
 				break;
@@ -205,7 +208,7 @@ UPD:
 				if(a2 <= 4)
 				{
 						LCD_ShowxNum((a-1)*144+120+(a2-1)*35,220,count,8,24,1);    //ÏÔÊ¾	
-				}else
+				}else if(a2 <= 8)
 				{
 						LCD_ShowxNum((a-1)*144+120+(a2-5)*35,244,count,8,24,1);    //ÏÔÊ¾	
 				}	
@@ -213,17 +216,17 @@ UPD:
 				Turn_around1(800,600);
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø
-				delay_ms(2500);		
-				Turn_around2(800,600);
-				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
-				TIM_SetCompare1(TIM13,20000-1110);  //¹Ø
-				delay_ms(1200);
+				delay_ms(1200);		
 				
 				Show_Str(336,408,200,24,"  ÓÐº¦À¬»ø    OK",24,0);
 				POINT_COLOR=RED;  
 				LCD_ShowxNum(260,408,count,8,24,1);    //ÏÔÊ¾
 				LCD_ShowxNum(406,408,a2,8,24,1);    //ÏÔÊ¾						
-				POINT_COLOR=BLUE;						
+				POINT_COLOR=BLUE;				
+				
+				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
+				TIM_SetCompare1(TIM13,20000-1090);  //¹Ø
+				Turn_around2(800,600);
 
 				a=0;				
 			break;
@@ -233,11 +236,12 @@ UPD:
 				LCD_ShowxNum(458,160,a3,8,24,0);    //ÏÔÊ¾	 
 				count++;
 				arr3[a3 - 1] = count;
+
 		
 				if(a3 <= 4)
 				{
 						LCD_ShowxNum((a-1)*144+120+(a3-1)*35,220,count,8,24,1);    //ÏÔÊ¾	
-				}else
+				}else if(a3 <= 8)
 				{
 						LCD_ShowxNum((a-1)*144+120+(a3-5)*35,244,count,8,24,1);    //ÏÔÊ¾	
 				}		
@@ -245,17 +249,20 @@ UPD:
 				Turn_around1(1600,600);
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø
-				delay_ms(2000);		
-				Turn_around2(1600,600);				
-				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
-				TIM_SetCompare1(TIM13,20000-1110);  //¹Ø
-				delay_ms(1200);
+				delay_ms(1200);		
 		
 				Show_Str(336,408,200,24,"  ³øÓàÀ¬»ø    OK",24,0);
 				POINT_COLOR=RED;  
 				LCD_ShowxNum(260,408,count,8,24,1);    //ÏÔÊ¾
 				LCD_ShowxNum(406,408,a3,8,24,1);    //ÏÔÊ¾						
-				POINT_COLOR=BLUE;				
+				POINT_COLOR=BLUE;			
+				
+				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
+				TIM_SetCompare1(TIM13,20000-1090);  //¹Ø
+				Turn_around2(1600,600);				
+
+				//delay_ms(1200);
+	
 				a=0;
 			break;
 		
@@ -265,31 +272,43 @@ UPD:
 				count++;	
 				arr4[a4 - 1] = count;
 		
-				LCD_ShowxNum((a-1)*144+120+(a4-1)*35,220,count,8,24,1);    //ÏÔÊ¾		
+				//LCD_ShowxNum((a-1)*144+120+(a4-1)*35,220,count,8,24,1);    //ÏÔÊ¾		
 		
+				if(a4 <= 4)
+				{
+					  LCD_ShowxNum((a-1)*144+120+(a4-1)*35,220,count,8,24,1);    //ÏÔÊ¾		
+				}else if(a4 <= 8)
+				{
+				  	LCD_ShowxNum((a-1)*144+120+(a4-5)*35,244,count,8,24,1);    //ÏÔÊ¾		
+				}		
+				
 				Turn_around2(800,600);
 				TIM_SetCompare1(TIM10,20000-2150);  //¹Ø	
 				TIM_SetCompare1(TIM13,20000-1650);  //¹Ø;
-				GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
-				delay_ms(1200);		
-				Turn_around1(800,600);	
-				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
-				TIM_SetCompare1(TIM13,20000-1110);  //¹Ø
-				delay_ms(1200);	
+				delay_ms(1200);
 
 				Show_Str(336,408,200,24,"  ÆäËûÀ¬»ø    OK",24,0);
 				POINT_COLOR=RED;  
 				LCD_ShowxNum(260,408,count,8,24,1);    //ÏÔÊ¾
 				LCD_ShowxNum(406,408,a4,8,24,1);    //ÏÔÊ¾						
-				POINT_COLOR=BLUE;					
+				POINT_COLOR=BLUE;			
+				
+				TIM_SetCompare1(TIM10,20000-3110);  //¹Ø	
+				TIM_SetCompare1(TIM13,20000-1090);  //¹Ø
+				Turn_around1(800,600);	
+
+				//delay_ms(1200);	
+
+		
 				a=0;		
 			break;
 		
 		default:
 			break;
 		}
-	GPIO_SetBits(GPIOD,GPIO_Pin_13);    // Í£
-	delay_ms(6000);
+	isfull();
+	GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // EN Ê¹ÄÜ 
+	delay_ms(4000);
 }
 	
 

@@ -29,13 +29,13 @@ Build target 'VIDEOPLAYER'
 compiling dispaly.c...
 ..\CLASSFICATION\DISPLAY\dispaly.c(118): warning:  #127-D: expected a statement
         }  
-..\CLASSFICATION\DISPLAY\dispaly.c(167): warning:  #111-D: statement is unreachable
-                GPIO_SetBits(GPIOD,GPIO_Pin_13);    // ?                ^
+..\CLASSFICATION\DISPLAY\dispaly.c(165): warning:  #111-D: statement is unreachable
+                GPIO_ResetBits(GPIOD,GPIO_Pin_13);    // EN Ê¹ÄÜ 
 ..\CLASSFICATION\DISPLAY\dispaly.c(117): warning:  #177-D: label "UPD" was declared but never referenced
   UPD:    
 ..\CLASSFICATION\DISPLAY\dispaly.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=126324 RO-data=17388 RW-data=720 ZI-data=1225864  
+Program Size: Code=126480 RO-data=17392 RW-data=720 ZI-data=1225864  
 FromELF: creating hex file...
 "..\OBJ\VIDEOPLAYER.axf" - 0 Error(s), 3 Warning(s).
 
